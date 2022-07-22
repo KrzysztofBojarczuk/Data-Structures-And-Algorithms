@@ -19,10 +19,13 @@ for (int i = 0; i < 3; i++)
     
 }
 
+
 stack.Pop();
 stack.Peek();
 
+
 Console.WriteLine("---");
+
 while (!stack.isEmpty())
 {
     var var = stack.Pop();
