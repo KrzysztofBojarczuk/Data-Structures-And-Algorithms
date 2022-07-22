@@ -23,8 +23,8 @@ for (int i = 0; i < 3; i++)
 stack.Pop();
 stack.Peek();
 
-
-Console.WriteLine("---");
+stack.Pop();
+stack.Peek();
 
 while (!stack.isEmpty())
 {
