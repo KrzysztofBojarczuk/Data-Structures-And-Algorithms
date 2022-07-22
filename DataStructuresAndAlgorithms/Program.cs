@@ -3,34 +3,29 @@
 using DataStructuresAndAlgorithms.BigData;
 using DataStructuresAndAlgorithms.LinearSearch;
 using DataStructuresAndAlgorithms.LinkedList;
+using DataStructuresAndAlgorithms.Stack;
+using System.Collections.Generic;
 
-Node nodeA = new Node();
-nodeA.Data = 865;
-Node nodeB = new Node();
-nodeB.Data = 344;
-Node nodeC = new Node();
-nodeC.Data = 888;
-Node nodeD = new Node();
-nodeD.Data = 222;
+// Kolekcje - przetrzymują elementy kolekcji jako obiekty. last-in-first-out 
+// push pop peek
 
-nodeA.Next = nodeB;
-nodeB.Next = nodeC;
-nodeC.Next = nodeD;
+Stack stack = new Stack(10);
 
-Console.WriteLine("===");
+for (int i = 0; i < 3; i++)
+{
+    stack.Push("Squitle");
+    stack.Push("Pickachu");
+    stack.Push("Chamralnder");
+    
+}
 
+stack.Pop();
+stack.Peek();
 
-LinkedList linkedList = new LinkedList();
-linkedList.InsertFirst(1);
-linkedList.InsertFirst(2);
-linkedList.InsertFirst(3);
-linkedList.InsertFirst(4);
+Console.WriteLine("---");
+while (!stack.isEmpty())
+{
+    var var = stack.Pop();
+    Console.WriteLine(var);
+}
 
-
-linkedList.DeleteFirst();
-linkedList.DeleteFirst();
-
-linkedList.InsertLast(546);
-linkedList.InsertLast(3434);
-
-linkedList.DisplayList();
