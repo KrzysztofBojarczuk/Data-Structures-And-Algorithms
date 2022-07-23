@@ -3,34 +3,21 @@
 using DataStructuresAndAlgorithms.BigData;
 using DataStructuresAndAlgorithms.LinearSearch;
 using DataStructuresAndAlgorithms.LinkedList;
+using DataStructuresAndAlgorithms.Queues;
 using DataStructuresAndAlgorithms.Stack;
 using System.Collections.Generic;
 
-// Kolekcje - przetrzymują elementy kolekcji jako obiekty. last-in-first-out 
-// push pop peek
-
-Stack stack = new Stack(10);
-
-for (int i = 0; i < 3; i++)
-{
-    stack.Push("Squitle");
-    stack.Push("Pickachu");
-    stack.Push("Chamralnder");
-    
-}
+// Kolekcje - przetrzymują elementy kolekcji jako obiekty.
+// Queue First In First Out
 
 
+Queue queue = new Queue(10);
+queue.Enqueue(1);
+queue.Enqueue(2);
+queue.Enqueue(3);
+queue.Enqueue(4);
 
-stack.Pop();
-stack.Peek();
+queue.Dequeue();
+queue.Dequeue();
 
-
-Console.WriteLine("---");
-
-while (!stack.isEmpty())
-{
-    var var = stack.Pop();
-    Console.WriteLine(var);
-}
-
-
+queue.Peek();
