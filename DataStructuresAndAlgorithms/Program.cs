@@ -7,16 +7,14 @@ using DataStructuresAndAlgorithms.BubbleSort;
 using DataStructuresAndAlgorithms.LinearSearch;
 using DataStructuresAndAlgorithms.LinkedList;
 using DataStructuresAndAlgorithms.Queues;
+using DataStructuresAndAlgorithms.Recursion;
 using DataStructuresAndAlgorithms.Stack;
 using System.Collections.Generic;
 
 
 
-
-int[] intArray = new int[] { 6, 5, 1, 7, 2, 4 };
-BubleSortClass bubleSortClass = new BubleSortClass();
-var sortArray = bubleSortClass.BubbleSort(intArray);
-foreach (var item in sortArray)
-{
-    Console.WriteLine(item);
-}
+RecursionClass rescursionClass = new RecursionClass();
+rescursionClass.MinusByOne(5);
+Console.WriteLine("==");
+var number = rescursionClass.RecursiveFactorial(6);
+Console.WriteLine(number);
