@@ -13,6 +13,48 @@ namespace DataStructuresAndAlgorithms.BinarySearchTree
         {
             Root = InsertItem(Root, key, value);
         }
+
+        public void PrintPostOrderTraversal()
+        {
+            PostOrderTraversal(Root);
+        }
+        private void PostOrderTraversal(TreeNode node)
+        {
+            if (node != null)
+            {
+                PostOrderTraversal(node.LeftChild);
+                PostOrderTraversal(node.RightChild);
+                Console.WriteLine(node.Key + " " + node.Value);
+            }
+        }
+        public void PrintInOrderTraversal()
+        {
+            InOrderTraversal(Root);
+        }
+        private void PreOrderTraversal(TreeNode node)
+        {
+            if (node != null)
+            {
+                Console.WriteLine(node.Key + " " + node.Value);
+                InOrderTraversal(node.LeftChild);
+                InOrderTraversal(node.RightChild);
+            }
+        }
+
+
+        public void PrintPreeInOrderTraversal()
+        {
+            PreOrderTraversal(Root);
+        }
+        private void InOrderTraversal(TreeNode node)
+        {
+            if (node != null)
+            {
+                InOrderTraversal(node.LeftChild);
+                Console.WriteLine(node.Key + " " + node.Value);
+                InOrderTraversal(node.RightChild);
+            }
+        }
         public TreeNode InsertItem(TreeNode node, int key, string value)
         {
             TreeNode newNode = new TreeNode(key, value);
